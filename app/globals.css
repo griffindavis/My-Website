@@ -1,0 +1,108 @@
+:root {
+  --bg: #f7f7f5;
+  --surface: #ffffff;
+  --text: #171717;
+  --muted: #575757;
+  --line: #e7e6e2;
+  --accent: #5b6a67;
+  --max-width: 50rem;
+  --radius: 0.65rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans), "IBM Plex Sans", "Avenir Next", "Segoe UI", sans-serif;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+}
+
+main {
+  width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration-color: color-mix(in srgb, var(--accent), transparent 55%);
+  text-underline-offset: 0.18em;
+  transition: color 180ms ease, text-decoration-color 180ms ease;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 0.18rem;
+  border-radius: 0.2rem;
+}
+
+.page-shell {
+  width: min(100% - 2.25rem, var(--max-width));
+  margin: 0 auto 5rem;
+}
+
+.interest-list {
+  margin: 1.25rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.interest-list li {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  border-radius: 999px;
+  padding: 0.28rem 0.72rem;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.focus-list {
+  margin: 1rem 0 0;
+  padding-left: 1.15rem;
+  max-width: 68ch;
+  color: var(--muted);
+}
+
+.focus-list li + li {
+  margin-top: 0.36rem;
+}
+
+#experiments {
+  padding-bottom: 200px;
+}
+
+@media (max-width: 640px) {
+  .page-shell {
+    width: min(100% - 1.35rem, var(--max-width));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
