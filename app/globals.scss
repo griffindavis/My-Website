@@ -1,0 +1,86 @@
+:root {
+  //--background: #f4f1ea;
+  --text: #1f1d1a;
+  --muted: #5c564f;
+  --border: #d9d1c4;
+  --accent: #23443c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  font-family: sans-serif;
+}
+
+.site {
+  padding: 2rem 5rem 0 5rem;
+}
+
+.name {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+}
+
+.title {
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.summary {
+  max-width: 36rem;
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 2rem;
+  align-items: center;
+}
+
+.actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--muted);
+  text-decoration: underline;
+  text-decoration-color: var(--border);
+  text-underline-offset: 0.2em;
+  transition: color 160ms ease, text-decoration-color 160ms ease;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
+  flex: 0 0 1rem;
+}
+
+.icon svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+.actions a:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}
