@@ -33,7 +33,7 @@ export default function Home() {
     <main className="site">
       <section>
         <p className="name">Griffin Davis</p>
-        <p className="title">Software Engineeer &amp; Team Lead at Epic Systems</p>
+        <p className="title">Software Engineer &amp; Team Lead at Epic Systems</p>
         <p className="summary">
           I design and build healthcare software, enjoy building iOS tools, and like
           turning messy workflows into simple experiences.

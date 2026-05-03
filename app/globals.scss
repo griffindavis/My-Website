@@ -25,6 +25,12 @@ body {
   padding: 2rem 5rem 0 5rem;
 }
 
+@media (max-width: 640px) {
+  .site {
+    padding: 1.25rem 1.25rem 0 1.25rem;
+  }
+}
+
 .name {
   margin-bottom: 1rem;
   font-size: 2rem;
